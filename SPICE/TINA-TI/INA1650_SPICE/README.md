@@ -3,6 +3,10 @@
 
 Automotive, High Common-mode Rejection, Low Distortion Differential Audio Line Receiver
 
+### Datasheet
+
+[INA165x-Q1 SoundPlus™ High Common-Mode Rejection	Line Receivers datasheet (Rev. C)](http://www.ti.com/lit/gpn/ina1650-q1)
+
 ### Features
 
 - AEC-Q100 qualified for automotive applications
