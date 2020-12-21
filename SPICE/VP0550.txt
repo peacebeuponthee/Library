@@ -1,0 +1,10 @@
+*VP0550 MODEL
+*  
+.MODEL VP0550   PMOS (LEVEL=3   RS=0.30            NSUB=5.0E15  
++DELTA=0.1      KAPPA=0.0612    TPG=-1             CGDO=2.8432E-10 
++RD=75.00       VTO=-3.50       VMAX=5.0E4         ETA=0.20
++NFS=6.466E10   TOX=1.0E-7      LD=1.6938E-9       UO=862
++XJ=6.46E-7     THETA=1.0E-5    CGSO=3.8198E-9     L=4.0E-6
++W=1.0E-2)  
+.ENDS
+* 

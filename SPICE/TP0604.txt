@@ -1,0 +1,10 @@
+*TP0604 MODEL
+*  
+.MODEL TP0604   PMOS (LEVEL=3   RS=0.0238          NSUB=5.0E14  
++DELTA=0.1      KAPPA=0.08214   TPG=-1             CGDO=5.22123E-11 
++RD=0.0239      VTO=-1.90       VMAX=3E6           ETA=0.121 
++NFS=3.3841E11  TOX=1.0E-7      LD=1.140E-9        UO=365.45
++XJ=6.5E-7      THETA=4.06E-5   CGSO=8.532E-11     L=2.5E-6
++W=2.0E-2)  
+.ENDS
+* 

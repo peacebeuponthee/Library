@@ -1,0 +1,286 @@
+*version 9.1 1993074830
+@index
+symloc DMOS_S2_L1_n 0 1402 b
+symloc IPB200N25N3_L1:DMOS_S2_L1_n 1402 631
+symloc IPI200N25N3_L1:DMOS_S2_L1_n 2033 633
+symloc IPP200N25N3_L1:DMOS_S2_L1_n 2666 633
+symloc IPB600N25N3_L1:DMOS_S2_L1_n 3299 629
+symloc IPD600N25N3_L1:DMOS_S2_L1_n 3928 631
+symloc IPI600N25N3_L1:DMOS_S2_L1_n 4559 631
+symloc IPP600N25N3_L1:DMOS_S2_L1_n 5190 631
+symloc BSC600N25NS3_L1:DMOS_S2_L1_n 5821 632
+symloc BSC16DN25NS3_L1:DMOS_S2_L1_n 6453 632
+symloc BSZ16DN25NS3_L1:DMOS_S2_L1_n 7085 632
+symloc BSC42DN25NS3_L1:DMOS_S2_L1_n 7717 632
+symloc BSZ42DN25NS3_L1:DMOS_S2_L1_n 8349 632
+symloc IPP220N25NFD_L1:DMOS_S2_L1_n 8981 636
+*symbol DMOS_S2_L1_n b
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=DMOS_S2_L1_n
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=DMOS_S2_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hcn 100 Ls=1n
+a 0 u 0:13 0 0 20 hcn 100 Ld=0.5n
+a 0 u 0:13 0 0 30 hcn 100 Lg=2n
+@pins
+p 0 25 40 hcn 100 source n 30 40 v
+a 0 s 0:1 0 31 38 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 10 20 hcn 100 gate n 0 20 h
+a 0 s 0:1 0 1 18 hln 100 PIN=2
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 25 10 hcn 100 drain n 30 0 d
+a 0 s 0:1 0 31 -2 hln 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+@graphics 46 40 0 20 10
+c 0 25 20 20 d_info:,0/0/0,,,,,,,,,,,,, 
+v 0 38 10
+38 30
+28 30
+;
+v 0 38 18 d_info:,,,,4/1/6/6,ON,0/0/255,,,,,,,, 
+35 22
+41 22
+38 18
+;
+v 0 25 16
+20 20
+;
+v 0 20 20
+25 24
+;
+r 0 35 17 41 18 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 30 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 10 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+v 0 30 20
+30 30
+;
+v 0 30 20
+20 20
+;
+v 0 38 10
+30 10
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 20 23
+20 17
+;
+v 0 20 33
+20 27
+;
+v 0 20 13
+20 7
+;
+*symbol IPB200N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPB200N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB200N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1.8n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n
+*symbol IPI200N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPI200N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPI200N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1.8n
+a 0 u 0:13 0 0 20 hlb 100 Ld=2.5n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n
+*symbol IPP200N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPP200N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP200N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1.8n
+a 0 u 0:13 0 0 20 hlb 100 Ld=2.5n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n
+*symbol IPB600N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPB600N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB600N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=2n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n
+*symbol IPD600N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPD600N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPD600N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1.5n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=3n
+*symbol IPI600N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPI600N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPI600N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=2n
+a 0 u 0:13 0 0 20 hlb 100 Ld=2.5n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n
+*symbol IPP600N25N3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPP600N25N3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP600N25N3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=2n
+a 0 u 0:13 0 0 20 hlb 100 Ld=2.5n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n
+*symbol BSC600N25NS3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=BSC600N25NS3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSC600N25NS3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=3n
+*symbol BSC16DN25NS3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=BSC16DN25NS3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSC16DN25NS3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=3n
+*symbol BSZ16DN25NS3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=BSZ16DN25NS3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSZ16DN25NS3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=3n
+*symbol BSC42DN25NS3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=BSC42DN25NS3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSC42DN25NS3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=3n
+*symbol BSZ42DN25NS3_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=BSZ42DN25NS3_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSZ42DN25NS3_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1n
+a 0 u 0:13 0 0 20 hlb 100 Ld=1n
+a 0 u 0:13 0 0 30 hlb 100 Lg=3n
+*symbol IPP220N25NFD_L1 ako DMOS_S2_L1_n
+d Infineon n-channel DMOS
+@type p 9.1
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| ?Ls|Ls=@Ls| ?Ld|Ld=@Ld| ?Lg|Lg=@Lg| 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=IPP220N25NFD_L1
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP220N25NFD_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+a 0 u 0:13 0 0 10 hlb 100 Ls=1.8n
+a 0 u 0:13 0 0 20 hlb 100 Ld=2.5n
+a 0 u 0:13 0 0 30 hlb 100 Lg=4n

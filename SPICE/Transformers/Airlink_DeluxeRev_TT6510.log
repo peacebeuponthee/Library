@@ -1,0 +1,23 @@
+Circuit: * X:\My_Projects\Library\SPICE\Transformers\Airlink_DeluxeRev_TT6510.asc
+
+WARNING: Less than two connections to node N002.  This node is used by L2.
+WARNING: Less than two connections to node N004.  This node is used by L4.
+.OP point found by inspection.
+
+Date: Sat Sep 26 16:44:40 2020
+Total elapsed time: 0.170 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2096
+traniter = 2096
+tranpoints = 1049
+accept = 1048
+rejected = 1
+matrix size = 9
+fillins = 8
+solver = Normal
+Matrix Compiler1: 1.19 KB object code size  0.4/0.2/[0.2]
+Matrix Compiler2: 919 bytes object code size  0.2/0.2/[0.2]
+
