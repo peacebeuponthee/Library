@@ -2,11 +2,11 @@
 *//////////////////////////////////////////////////////////////////////
 * (C) National Semiconductor, Inc.
 * Models developed and under copyright by:
-* National Semiconductor, Inc.  
+* National Semiconductor, Inc.
 
 */////////////////////////////////////////////////////////////////////
 * Legal Notice: This material is intended for free software support.
-* The file may be copied, and distributed; however, reselling the 
+* The file may be copied, and distributed; however, reselling the
 *  material is illegal
 
 *////////////////////////////////////////////////////////////////////
@@ -27,13 +27,13 @@
 *                  | | |  negative power supply
 *                  | | | |  output
 *                  | | | | |
-.SUBCKT LM6171A/NS 3 2 4 5 6
+.SUBCKT LM6171A 3 2 4 5 6
 * CAUTION:  SET .OPTIONS GMIN=1E-16 TO CORRECTLY MODEL INPUT BIAS CURRENT.
 * Features:
 * +/-15V Operation
 * Unity Gain Stable
 * Offset voltage (max) =             3mV
-* Gain-bandwidth product =           100 MHz 
+* Gain-bandwidth product =           100 MHz
 * Supply current =                   2.5mA
 * Slew rate =                        3600V/uS
 * Open Loop gain =                   90dB

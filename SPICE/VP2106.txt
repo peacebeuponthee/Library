@@ -1,0 +1,10 @@
+*VP2106 MODEL 
+*  
+.MODEL VP2106   PMOS (LEVEL=3   RS=0.73            NSUB=5.0E14  
++DELTA=0.1      KAPPA=0.0411    TPG=-1             CGDO=6.1716E-10 
++RD=1.91        VTO=-2.30       VMAX=3.0E6         ETA=0.12098
++NFS=3.384E11   TOX=1.0E-7      LD=1.6980E-9       UO=865.45
++XJ=6.5E-7      THETA=4.063E-5  CGSO=9.10E-9       L=2.5E-6
++W=0.5E-2)  
+.ENDS
+*
