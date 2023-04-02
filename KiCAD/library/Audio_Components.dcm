@@ -1,0 +1,230 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 290CBZ
+D Transformer, split primary, dual secondary
+K transformer coil magnet
+F ~
+$ENDCMP
+#
+$CMP 5AR4
+D DOUBLE ANODE RECTIFYING TUBE
+K RECTIFYING TUBE
+F https://www.jj-electronic.com/en/gz34s-5ar4
+$ENDCMP
+#
+$CMP 6V6GT
+D pentode, 25W
+K pentode valve
+F http://www.r-type.org/pdfs/el34.pdf
+$ENDCMP
+#
+$CMP AD5627BRMZ
+D Dual, 12-Bit nanoDAC+ with i2C Interface, MSOP-10
+K dac 2nch 12bit i2c
+F https://www.mouser.co.uk/datasheet/2/609/AD5627R_5647R_5667R_5627_5667-1501607.pdf
+$ENDCMP
+#
+$CMP ADA4945-1
+D High Speed, ±0.1 μV/ ̊C Offset Drift, Fully Differential ADC Driver, LFCSP-16
+F http://www.ti.com/lit/ds/symlink/lm4990.pdf
+$ENDCMP
+#
+$CMP ADM811TARTZ
+D Ultralow Power voltage supervisor, logic low reset output, SOT-143-4
+K supply voltage supervisor
+F https://www.mouser.co.uk/datasheet/2/609/ADM811_812-1503324.pdf
+$ENDCMP
+#
+$CMP AP7381-SOT89
+D Positive 150mA 40V Linear Regulator, Fixed Output 7V, SOT-89
+K Voltage Regulator 150mA Positive
+F http://www.fairchildsemi.com/ds/LM/LM78L05A.pdf
+$ENDCMP
+#
+$CMP CD4538
+D Monostable
+K CMOS
+F https://assets.nexperia.com/documents/data-sheet/HEF4538B.pdf
+$ENDCMP
+#
+$CMP DIN-5
+D 5-pin DIN connector
+K circular DIN connector
+F http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf
+$ENDCMP
+#
+$CMP DIN-5_180degree
+D 5-pin DIN connector (5-pin DIN-5 stereo)
+K circular DIN connector stereo audio
+F http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf
+$ENDCMP
+#
+$CMP DUAL_NJFET_SDG
+D Dual N-JFET transistor
+K transistor NJFET N-JFET Dual
+F ~
+$ENDCMP
+#
+$CMP DUAL_NJFET_SGD
+D Dual N-JFET transistor
+K transistor NJFET N-JFET Dual
+F ~
+$ENDCMP
+#
+$CMP DUAL_NMOS_DGS
+D Dual NMOS transistor, 8 pin package
+K transistor NMOS N-MOS N-MOSFET
+F ~
+$ENDCMP
+#
+$CMP DUAL_PMOS
+D Dual PMOS transistor, 6 pin package
+K transistor PMOS P-MOS P-MOSFET
+F ~
+$ENDCMP
+#
+$CMP DUAL_PMOS_S1G1S2G2D1D1D2D2
+D Dual PMOS transistor, 8 pin package
+K transistor PMOS P-MOS P-MOSFET
+F ~
+$ENDCMP
+#
+$CMP DUAL_PMOS_S1G1S2G2D1D2
+D Dual PMOS transistor, 8 pin package
+K transistor PMOS P-MOS P-MOSFET
+F ~
+$ENDCMP
+#
+$CMP INA1651IPWR
+D SoundPlus™ high common-mode rejection (91-dB), low THD+N (-120-dB) differential line receiver
+K line receiver
+$ENDCMP
+#
+$CMP LT3042xMSE
+D 20V, 200mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12
+K linear voltage regulator low-noise
+F https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf
+$ENDCMP
+#
+$CMP LT3045
+D 20V, 500mA, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12
+K LDO Ultralow Noise
+F https://www.analog.com/media/en/technical-documentation/data-sheets/LT3045.pdf
+$ENDCMP
+#
+$CMP LT3045xMSE
+D 500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Linear Regulator, MSOP-12
+K linear voltage regulator low-noise
+F https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf
+$ENDCMP
+#
+$CMP LT3093xMSE
+D -20V, 200mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Negative Linear Regulator, MSOP-12
+K linear voltage regulator low-noise negative
+F https://www.analog.com/media/en/technical-documentation/data-sheets/lt3093.pdf
+$ENDCMP
+#
+$CMP LT3094
+D –20V, 500mA, Ultralow Noise, Ultrahigh PSRR Negative Linear Regulator, MSOP-12
+K LDO Negative Ultralow Noise
+F https://www.analog.com/media/en/technical-documentation/data-sheets/LT3045.pdf
+$ENDCMP
+#
+$CMP LT3094xMSE
+D 500mA, Adjustable, Ultralow Noise, Ultrahigh PSRR Negative Linear Regulator, MSOP-12
+K linear voltage regulator low-noise negative
+F https://www.analog.com/media/en/technical-documentation/data-sheets/3045fa.pdf
+$ENDCMP
+#
+$CMP LTC6268-10
+D 4GHz Ultra-Low Bias Current FET Input Op Amp, SOT-6
+K single opamp
+F https://www.analog.com/media/en/technical-documentation/data-sheets/OP07.pdf
+$ENDCMP
+#
+$CMP LTC6655CHMS8-5
+D 0.25ppm Noise, Low Drift Precision References, 13.2V input, 5ppm/C drift, 5V output, MSOP-8
+K voltage reference vref
+F https://www.analog.com/media/en/technical-documentation/data-sheets/LTC6655-6655LN.pdf
+$ENDCMP
+#
+$CMP LTR-110
+D Audio transformer Monacor LTR-110
+K transformer coil magnet
+F ~
+$ENDCMP
+#
+$CMP MC1496
+D Balanced Modulator/Demodulator
+F https://www.mouser.co.uk/datasheet/2/308/MC1496-D-1773763.pdf
+$ENDCMP
+#
+$CMP NCV7751
+D 12 Low-Side Relay Drivers
+K Relay Driver
+F https://www.onsemi.com/pub/Collateral/NCV7751-D.PDF
+$ENDCMP
+#
+$CMP OLED-096O064A-LPP3N00000
+D Graphics Display 96x64px, 6800/8080/SPI/I2C,  3.3V VDD
+K display LCD graphic
+F https://www.mouser.co.uk/datasheet/2/427/oled096o064alpp3n00000-1284419.pdf
+$ENDCMP
+#
+$CMP QUAD_NMOS_DGS
+D Dual NMOS transistor, 16 pin package
+K transistor NMOS N-MOS N-MOSFET
+F ~
+$ENDCMP
+#
+$CMP Q_QUAD_NPN
+D Dual NPN transistor, 6 pin package
+K transistor NPN
+F ~
+$ENDCMP
+#
+$CMP Q_QUAD_PNP
+D Dual NPN transistor, 6 pin package
+K transistor NPN
+F ~
+$ENDCMP
+#
+$CMP SI4403DDY
+D -15.4A Id, -20V Vds, P-Channel Mosfet, SO-8
+K Mosfet P-MOS
+F https://www.mouser.co.uk/datasheet/2/427/si4403ddy-1110694.pdf
+$ENDCMP
+#
+$CMP SW_10P4T
+D Switch, 4 position switch, 10P4T
+K switch 9p4t ON-ON-ON-ON
+F ~
+$ENDCMP
+#
+$CMP SW_10P5T
+D Switch, 10P5T
+K switch 10P5T
+F ~
+$ENDCMP
+#
+$CMP SW_2P4T
+D SR10010F-0204-20F0B-C7-N-0027, Alpha
+F https://www.mouser.co.uk/datasheet/2/13/R10010F-1522325.pdf
+$ENDCMP
+#
+$CMP TPS723
+D 200mA Adjustable -1.2V to -10V, or fixed -2.5V, Low Drop-out Voltage Regualtor, SOT23-5
+K LDO Voltage Regulator 500mA Adjustable
+$ENDCMP
+#
+$CMP TS34119
+D Low Power Audio Amplifier
+K Audio Amplifier
+F https://www.mouser.co.uk/datasheet/2/395/TS34119_C15-1115207.pdf
+$ENDCMP
+#
+$CMP UJC-HP-G-SMT-TR
+D USB Type C Female connector
+$ENDCMP
+#
+#End Doc Library

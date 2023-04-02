@@ -1,0 +1,137 @@
+*version 8.0 235246482
+@index
+symloc nfet5x 0 905
+symloc 11xxyy:nfet5x 905 259
+symloc 110814:nfet5x 1164 266
+symloc 110808:nfet5x 1430 266
+symloc 110802:nfet5x 1696 266
+symloc 110800:nfet5x 1962 267
+symloc 114804:nfet5x 2229 268
+symloc 114813:nfet5x 2497 268
+symloc 114835:nfet5x 2765 268
+symloc 110804:nfet5x 3033 266
+*symbol nfet5x
+d 5 terminal n-channel FET
+@type p
+@attributes
+a 1 s 9 0 6 4 hln 100 REFDES=M?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 0 u 0 0 0 10 hln 100 VTN=0.0
+a 0 sp 11 0 26 20 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 0 10 22 hln 100 G n 0 20 h
+a 0 s 0 0 -1 18 hln 100 PIN=1
+a 0 s 0 0 -2 20 hln 100 ERC=x
+p 0 32 30 hln 100 S n 30 40 v
+a 0 s 0 0 28 41 hln 100 PIN=2
+a 0 s 0 0 30 42 hln 100 ERC=x
+p 0 28 8 hln 100 D n 30 0 d
+a 0 s 0 0 32 -3 hln 100 PIN=4
+a 0 s 0 0 30 -4 hln 100 ERC=x
+p 0 26 33 hln 100 B n 30 25 u
+a 0 s 0 0 33 27 hln 100 PIN=5
+a 0 s 0 0 34 25 hln 100 ERC=x
+p 2 7 38 hln 100 V n 15 40 v
+a 0 s 0 0 15 43 hln 100 PIN=3
+a 0 s 0 0 17 44 hln 100 ERC=x
+@graphics 35 40 0 20 10
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+v 0 15 10
+15 30
+;
+v 0 20 20
+20 17
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 10 20
+15 20
+;
+v 0 20 15
+20 10
+;
+v 0 20 7
+20 33
+;
+*symbol 11xxyy ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=11xxyy
+a 0 u 0 0 0 10 hln 100 VTN=
+a 0 sp 0 0 0 0 hln 100 MODEL=11xxyy
+*symbol 110814 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110814
+a 0 up 0 0 0 10 hln 100 VTN=1.363V
+a 0 sp 0 0 0 0 hln 100 MODEL=110814
+*symbol 110808 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110808
+a 0 up 0 0 0 10 hln 100 VTN=0.763V
+a 0 sp 0 0 0 0 hln 100 MODEL=110808
+*symbol 110802 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110802
+a 0 up 0 0 0 10 hln 100 VTN=0.163V
+a 0 sp 0 0 0 0 hln 100 MODEL=110802
+*symbol 110800 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110800
+a 0 up 0 0 0 10 hln 100 VTN=-0.037V
+a 0 sp 0 0 0 0 hln 100 MODEL=110800
+*symbol 114804 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=114804
+a 0 up 0 0 0 10 hln 100 VTN=-0.4811V
+a 0 sp 0 0 0 0 hln 100 MODEL=114804
+*symbol 114813 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=114813
+a 0 up 0 0 0 10 hln 100 VTN=-1.3811V
+a 0 sp 0 0 0 0 hln 100 MODEL=114813
+*symbol 114835 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=114835
+a 0 up 0 0 0 10 hln 100 VTN=-3.5811V
+a 0 sp 0 0 0 0 hln 100 MODEL=114835
+*symbol 110804 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110804
+a 0 up 0 0 0 10 hln 100 VTN=0.363V
+a 0 sp 0 0 0 0 hln 100 MODEL=110804

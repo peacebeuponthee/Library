@@ -1,0 +1,206 @@
+* Library of Advanced Linear Devices, Inc. definitions
+*
+* Copyright 2013 Advanced Linear Devices, Inc.
+*   Neither this library nor any part may be copied without the express
+*   written consent of Advanced Linear Devices, Inc.
+* PSPICE version
+* $Revision:  2.0  $
+* $Date:    6 Feb 2013 00:00:00  $
+* $By:    A.P  $
+* -----------------------------------------------------------------------------
+*
+* This library of models and macromodels is being supplied to users as an aid to
+* circuit design. While it reflects reasonably close similarity to the actual device
+* in terms of performance, it is not suggested as a replacement for bread-
+* boarding. Simulation should be used as a forerunner or a supplement to
+* traditional lab testing.
+*
+* Users should very carefully note the following factors regarding these 
+* models:
+*
+*     Model performance in general will reflect typical baseline specs for a
+*     given device, and certain aspects of performance may not be modeled
+*     fully.
+*
+*     While reasonable care has been taken in their preparation, we cannot be
+*     responsible for correct application on any and all computer systems.
+*
+*     In all cases, the current data sheet information for a given real device
+*     is your final design guideline, and is the only actual performance
+*     guarantee.  For further technical information, refer to individual device
+*     data sheets.
+*
+*     Model users are hereby notified that these models are supplied "as is",
+*     with no direct or implied responsibility on the part of Advanced Linear
+*     Devices for their operation within a customer circuit or system. Further,
+*     ALD reserves the right to change these models without prior notice. 
+*
+*     The macromodels listed in this library represent typical performance 
+*     characteristics, without offset (Vos) adjustment, or other 
+*     parameters that would allow for Monte Carlo simulation of these circuits. 
+*     
+* -----------------------------------------------------------------------------
+*    
+* Your feedback and suggestions on these (and future) models will be
+* appreciated.
+*
+*
+* Advanced Linear Devices, Inc.
+* Customer Support Group
+* 415 Tasman Drive
+* Sunnyvale, California. 94089
+* Tel: (408) 747-1155 
+* Fax: (408) 747-1286
+* techsupport@aldinc.com
+* -----------------------------------------------------------------------------
+*
+* 1108.lib
+*----------------------------------
+* N channel TRANSISTORS
+*----------------------------------
+*
+*          listing of single integrated 1108E transistors.
+*          Five terminal N-channel transistors.
+*   1108E VT=1.0V transistor
+*   1110E VT=1.0V transistor
+*   1121E VT=1.0V transistor
+*   1123E VT=1.0V transistor
+*   11xxyy VT=variable VT transistor
+
+*             d g s b v+
+.subckt 1108E 1 2 3 4 5 params: vtn=1.0
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=7.79e11
++             	 tox=(0.055u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.model dps D (Is=2.61e-7
++             Isr=1.0e-5
++             Bv=34 Ibv=1e+4
++             Rs=2.74e-7 trs1=3e-3
++             Cjo=1.3e-4 )
+.ends
+*-----------------------------------------------------------------------------------------
+*             d g s b v+
+.subckt 1110E 1 2 3 4 5 params: vtn=1.0
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=7.79e11
++             	 tox=(0.055u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------
+*             d g s b v+
+.subckt 1121E 1 2 3 4 5 params: vtn=1.0
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=7.79e11
++             	 tox=(0.055u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------
+*             d g s b v+
+.subckt 1123E 1 2 3 4 5 params: vtn=1.0
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=7.79e11
++             	 tox=(0.055u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------
+*              d g s b v+
+.subckt 11xxyy 1 2 3 4 5 params: vtn=0.75
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=7.79e11
++             	 tox=(0.055u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*
+*
+*-----------------------------------------------------------------------------------------

@@ -1,0 +1,507 @@
+*version 8.0 2138595658
+@index
+symloc nfet5x 0 911
+symloc 11xxyy:nfet5x 911 259
+symloc 110814:nfet5x 1170 266
+symloc 110808:nfet5x 1436 266
+symloc 110802:nfet5x 1702 266
+symloc 110800:nfet5x 1968 267
+symloc 114804:nfet5x 2235 268
+symloc 114813:nfet5x 2503 268
+symloc 114835:nfet5x 2771 268
+symloc 110804:nfet5x 3039 266
+symloc 210800:nfet5x 3305 266
+symloc 210814:nfet5x 3571 178
+symloc 210808:nfet5x 3749 178
+symloc 210804:nfet5x 3927 178
+symloc 210802:nfet5x 4105 178
+symloc 214804:nfet5x 4283 180
+symloc 214813:nfet5x 4463 180
+symloc 214835:nfet5x 4643 180
+symloc 21xxyy:nfet5x 4823 176
+symloc 212914:nfet5x 4999 178
+symloc 212904:nfet5x 5177 178
+symloc 212902:nfet5x 5355 178
+symloc 212900:nfet5x 5533 179
+symloc 216904:nfet5x 5712 180
+symloc 216913:nfet5x 5892 180
+symloc 216935:nfet5x 6072 180
+symloc 21x9yy:nfet5x 6252 176
+symloc 810023:nfet5x 6428 178
+symloc 810024:nfet5x 6606 178
+symloc 810025:nfet5x 6784 178
+symloc 810026:nfet5x 6962 178
+symloc 910023:nfet5x 7140 178
+symloc 910024:nfet5x 7318 178
+symloc 910025:nfet5x 7496 178
+symloc 910026:nfet5x 7674 178
+symloc 910027:nfet5x 7852 178
+symloc 910028:nfet5x 8030 178
+symloc 810027:nfet5x 8208 178
+symloc 810028:nfet5x 8386 178
+symloc 21x8yy:nfet5x 8564 176
+symloc 212908:nfet5x 8740 178
+symloc 111933:nfet5x 8918 266
+symloc 810020:nfet5x 9184 178
+symloc 810021:nfet5x 9362 178
+symloc 810022:nfet5x 9540 178
+symloc 910020:nfet5x 9718 178
+symloc 910021:nfet5x 9896 178
+symloc 910022:nfet5x 10074 178
+symloc 810019:nfet5x 10252 178
+symloc 810018:nfet5x 10430 178
+symloc 810017:nfet5x 10608 178
+symloc 810016:nfet5x 10786 178
+symloc 910019:nfet5x 10964 178
+symloc 910018:nfet5x 11142 178
+symloc 910017:nfet5x 11320 178
+symloc 910016:nfet5x 11498 178
+*symbol nfet5x
+d 5 terminal n-channel FET
+@type p 8.0
+@attributes
+a 1 s 9 0 6 4 hln 100 REFDES=M?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 0 u 0 0 0 10 hln 100 VTN=0.0
+a 0 sp 11 0 26 20 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 0 10 22 hln 100 G n 0 20 h
+a 0 s 0 0 -1 18 hln 100 PIN=1
+a 0 s 0 0 -2 20 hln 100 ERC=x
+p 0 32 30 hln 100 S n 30 40 v
+a 0 s 0 0 28 41 hln 100 PIN=2
+a 0 s 0 0 30 42 hln 100 ERC=x
+p 0 28 8 hln 100 D n 30 0 d
+a 0 s 0 0 32 -3 hln 100 PIN=4
+a 0 s 0 0 30 -4 hln 100 ERC=x
+p 0 26 33 hln 100 B n 30 25 u
+a 0 s 0:1 0 33 27 hln 100 PIN=5
+a 0 s 0 0 34 25 hln 100 ERC=x
+p 2 7 38 hln 100 V n 15 40 v
+a 0 s 0 0 15 43 hln 100 PIN=3
+a 0 s 0 0 17 44 hln 100 ERC=x
+@graphics 35 40 0 20 10
+v 0 30 30
+25 34
+;
+v 0 25 26
+30 30
+;
+v 0 20 20
+20 17
+;
+v 0 15 10
+15 30
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 10 20
+15 20
+;
+v 0 20 15
+20 10
+;
+v 0 20 7
+20 33
+;
+*symbol 11xxyy ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=11xxyy
+a 0 u 0 0 0 10 hln 100 VTN=
+a 0 sp 0 0 0 0 hln 100 MODEL=11xxyy
+*symbol 110814 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110814
+a 0 up 0 0 0 10 hln 100 VTN=1.363V
+a 0 sp 0 0 0 0 hln 100 MODEL=110814
+*symbol 110808 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110808
+a 0 up 0 0 0 10 hln 100 VTN=0.763V
+a 0 sp 0 0 0 0 hln 100 MODEL=110808
+*symbol 110802 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110802
+a 0 up 0 0 0 10 hln 100 VTN=0.163V
+a 0 sp 0 0 0 0 hln 100 MODEL=110802
+*symbol 110800 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110800
+a 0 up 0 0 0 10 hln 100 VTN=-0.037V
+a 0 sp 0 0 0 0 hln 100 MODEL=110800
+*symbol 114804 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=114804
+a 0 up 0 0 0 10 hln 100 VTN=-0.4811V
+a 0 sp 0 0 0 0 hln 100 MODEL=114804
+*symbol 114813 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=114813
+a 0 up 0 0 0 10 hln 100 VTN=-1.3811V
+a 0 sp 0 0 0 0 hln 100 MODEL=114813
+*symbol 114835 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=114835
+a 0 up 0 0 0 10 hln 100 VTN=-3.5811V
+a 0 sp 0 0 0 0 hln 100 MODEL=114835
+*symbol 110804 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=110804
+a 0 up 0 0 0 10 hln 100 VTN=0.363V
+a 0 sp 0 0 0 0 hln 100 MODEL=110804
+*symbol 210800 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=210800
+a 0 up 0 0 0 10 hln 100 VTN=-0.037
+a 0 sp 0 0 0 0 hln 100 MODEL=210800
+*symbol 210814 ako nfet5x
+d 210814 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.363
+a 0 sp 11 0 26 20 hln 100 PART=210814
+a 0 sp 0 0 0 0 hln 100 MODEL=210814
+*symbol 210808 ako nfet5x
+d 210814 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=0.763
+a 0 sp 11 0 26 20 hln 100 PART=210808
+a 0 sp 0 0 0 0 hln 100 MODEL=210808
+*symbol 210804 ako nfet5x
+d 210804 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=0.363
+a 0 sp 11 0 26 20 hln 100 PART=210804
+a 0 sp 0 0 0 0 hln 100 MODEL=210804
+*symbol 210802 ako nfet5x
+d 210802 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=0.163
+a 0 sp 11 0 26 20 hln 100 PART=210802
+a 0 sp 0 0 0 0 hln 100 MODEL=210802
+*symbol 214804 ako nfet5x
+d 214804 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-0.4811
+a 0 sp 11 0 26 20 hln 100 PART=214804
+a 0 sp 0 0 0 0 hln 100 MODEL=214804
+*symbol 214813 ako nfet5x
+d 214813 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-1.3811
+a 0 sp 11 0 26 20 hln 100 PART=214813
+a 0 sp 0 0 0 0 hln 100 MODEL=214813
+*symbol 214835 ako nfet5x
+d 214835 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-3.5811
+a 0 sp 11 0 26 20 hln 100 PART=214835
+a 0 sp 0 0 0 0 hln 100 MODEL=214835
+*symbol 21xxyy ako nfet5x
+d 21xxyy EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 sp 11 0 26 20 hln 100 PART=21x8yy
+a 0 sp 0 0 0 0 hln 100 MODEL=21x8yy
+a 0 u 0 0 0 10 hln 100 VTN=vtn
+*symbol 212914 ako nfet5x
+d 212914 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.363
+a 0 sp 11 0 26 20 hln 100 PART=212914
+a 0 sp 0 0 0 0 hln 100 MODEL=212914
+*symbol 212904 ako nfet5x
+d 212904 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=0.363
+a 0 sp 11 0 26 20 hln 100 PART=212904
+a 0 sp 0 0 0 0 hln 100 MODEL=212904
+*symbol 212902 ako nfet5x
+d 212902 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=0.163
+a 0 sp 11 0 26 20 hln 100 PART=212902
+a 0 sp 0 0 0 0 hln 100 MODEL=212902
+*symbol 212900 ako nfet5x
+d 212900 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-0.037
+a 0 sp 11 0 26 20 hln 100 PART=212900
+a 0 sp 0 0 0 0 hln 100 MODEL=212900
+*symbol 216904 ako nfet5x
+d 216904 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-0.4811
+a 0 sp 11 0 26 20 hln 100 PART=216904
+a 0 sp 0 0 0 0 hln 100 MODEL=216904
+*symbol 216913 ako nfet5x
+d 216913 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-1.3811
+a 0 sp 11 0 26 20 hln 100 PART=216913
+a 0 sp 0 0 0 0 hln 100 MODEL=216913
+*symbol 216935 ako nfet5x
+d 216935 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=-3.5811
+a 0 sp 11 0 26 20 hln 100 PART=216935
+a 0 sp 0 0 0 0 hln 100 MODEL=216935
+*symbol 21x9yy ako nfet5x
+d 21x9yy EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=vtn
+a 0 sp 11 0 26 20 hln 100 PART=21x9yy
+a 0 sp 0 0 0 0 hln 100 MODEL=21x9yy
+*symbol 810023 ako nfet5x
+d 810023 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.263V
+a 0 sp 11 0 26 20 hln 100 PART=810023
+a 0 sp 0 0 0 0 hln 100 MODEL=810023
+*symbol 810024 ako nfet5x
+d 810024 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.363V
+a 0 sp 11 0 26 20 hln 100 PART=810024
+a 0 sp 0 0 0 0 hln 100 MODEL=810024
+*symbol 810025 ako nfet5x
+d 810025 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.463V
+a 0 sp 11 0 26 20 hln 100 PART=810025
+a 0 sp 0 0 0 0 hln 100 MODEL=810025
+*symbol 810026 ako nfet5x
+d 810026 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.563V
+a 0 sp 11 0 26 20 hln 100 PART=810026
+a 0 sp 0 0 0 0 hln 100 MODEL=810026
+*symbol 910023 ako nfet5x
+d 910023 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.263V
+a 0 sp 11 0 26 20 hln 100 PART=910023
+a 0 sp 0 0 0 0 hln 100 MODEL=910023
+*symbol 910024 ako nfet5x
+d 910024 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.363V
+a 0 sp 11 0 26 20 hln 100 PART=910024
+a 0 sp 0 0 0 0 hln 100 MODEL=910024
+*symbol 910025 ako nfet5x
+d 910025 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.463V
+a 0 sp 11 0 26 20 hln 100 PART=910025
+a 0 sp 0 0 0 0 hln 100 MODEL=910025
+*symbol 910026 ako nfet5x
+d 910026 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.563V
+a 0 sp 11 0 26 20 hln 100 PART=910026
+a 0 sp 0 0 0 0 hln 100 MODEL=910026
+*symbol 910027 ako nfet5x
+d 910027 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.663V
+a 0 sp 11 0 26 20 hln 100 PART=910027
+a 0 sp 0 0 0 0 hln 100 MODEL=910027
+*symbol 910028 ako nfet5x
+d 910028 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.763V
+a 0 sp 11 0 26 20 hln 100 PART=910028
+a 0 sp 0 0 0 0 hln 100 MODEL=910028
+*symbol 810027 ako nfet5x
+d 810027 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.663V
+a 0 sp 11 0 26 20 hln 100 PART=810027
+a 0 sp 0 0 0 0 hln 100 MODEL=810027
+*symbol 810028 ako nfet5x
+d 810028 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.763V
+a 0 sp 11 0 26 20 hln 100 PART=810028
+a 0 sp 0 0 0 0 hln 100 MODEL=810028
+*symbol 21x8yy ako nfet5x
+d 21xxyy EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 sp 11 0 26 20 hln 100 PART=21x8yy
+a 0 sp 0 0 0 0 hln 100 MODEL=21x8yy
+a 0 u 0 0 0 10 hln 100 VTN=vtn
+*symbol 212908 ako nfet5x
+d 212904 EPAD MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=0.763
+a 0 sp 11 0 26 20 hln 100 PART=212908
+a 0 sp 0 0 0 0 hln 100 MODEL=212908
+*symbol 111933 ako nfet5x
+d N-Channel Transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS:\n+ vtn=@vtn
+a 0 sp 11 0 26 20 hln 100 PART=111933
+a 0 up 0 0 0 10 hln 100 VTN=3.263V
+a 0 sp 0 0 0 0 hln 100 MODEL=111933
+*symbol 810020 ako nfet5x
+d 810020 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.963V
+a 0 sp 11 0 26 20 hln 100 PART=810020
+a 0 sp 0 0 0 0 hln 100 MODEL=810020
+*symbol 810021 ako nfet5x
+d 810021 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.063V
+a 0 sp 11 0 26 20 hln 100 PART=810021
+a 0 sp 0 0 0 0 hln 100 MODEL=810021
+*symbol 810022 ako nfet5x
+d 810022 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.163V
+a 0 sp 11 0 26 20 hln 100 PART=810022
+a 0 sp 0 0 0 0 hln 100 MODEL=810022
+*symbol 910020 ako nfet5x
+d 910020 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.963V
+a 0 sp 11 0 26 20 hln 100 PART=910020
+a 0 sp 0 0 0 0 hln 100 MODEL=910020
+*symbol 910021 ako nfet5x
+d 9`0021 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.063V
+a 0 sp 11 0 26 20 hln 100 PART=910021
+a 0 sp 0 0 0 0 hln 100 MODEL=910021
+*symbol 910022 ako nfet5x
+d 910022 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=2.163V
+a 0 sp 11 0 26 20 hln 100 PART=910022
+a 0 sp 0 0 0 0 hln 100 MODEL=910022
+*symbol 810019 ako nfet5x
+d 810019 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.863V
+a 0 sp 11 0 26 20 hln 100 PART=810019
+a 0 sp 0 0 0 0 hln 100 MODEL=810019
+*symbol 810018 ako nfet5x
+d 810019 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.763V
+a 0 sp 11 0 26 20 hln 100 PART=810018
+a 0 sp 0 0 0 0 hln 100 MODEL=810018
+*symbol 810017 ako nfet5x
+d 810019 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.663V
+a 0 sp 11 0 26 20 hln 100 PART=810017
+a 0 sp 0 0 0 0 hln 100 MODEL=810017
+*symbol 810016 ako nfet5x
+d 810019 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.563V
+a 0 sp 11 0 26 20 hln 100 PART=810016
+a 0 sp 0 0 0 0 hln 100 MODEL=810016
+*symbol 910019 ako nfet5x
+d 910020 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.863V
+a 0 sp 11 0 26 20 hln 100 PART=910019
+a 0 sp 0 0 0 0 hln 100 MODEL=910019
+*symbol 910018 ako nfet5x
+d 910020 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.763V
+a 0 sp 11 0 26 20 hln 100 PART=910018
+a 0 sp 0 0 0 0 hln 100 MODEL=910018
+*symbol 910017 ako nfet5x
+d 910020 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.663V
+a 0 sp 11 0 26 20 hln 100 PART=910017
+a 0 sp 0 0 0 0 hln 100 MODEL=910017
+*symbol 910016 ako nfet5x
+d 910020 SAB MOSFET
+@type p 8.0
+@attributes
+a 0 u 0 0 0 10 hln 100 VTN=1.563V
+a 0 sp 11 0 26 20 hln 100 PART=910016
+a 0 sp 0 0 0 0 hln 100 MODEL=910016

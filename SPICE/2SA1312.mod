@@ -9,8 +9,8 @@
 *  TNOM                 :25 degree
 *  Pin Assign           :1=Collector 2=Base 3=Emitter
 *********************************************************************
-.SUBCKT 2SA1312 1 2 3
-Q1 1 2 3 3 2SA1312_BJT
+* .SUBCKT 2SA1312 1 2 3
+* Q1 1 2 3 3 2SA1312_BJT
 .MODEL 2SA1312_BJT PNP(
 + LEVEL = 1
 + IS = 2e-013

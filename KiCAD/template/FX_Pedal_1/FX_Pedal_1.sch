@@ -1,0 +1,355 @@
+EESchema Schematic File Version 4
+LIBS:Tweed57-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Audio_Components:AudioJack3_Switch J1
+U 1 1 5C74E287
+P 2900 2850
+F 0 "J1" H 2850 3200 50  0000 C CNN
+F 1 "Input" H 2850 2450 50  0000 C CNN
+F 2 "Audio_Components:Jack_6.3mm_Amphenol_ACJS-NHDR_Horizontal" H 2900 2850 50  0001 C CNN
+F 3 "" H 2900 2850 50  0001 C CNN
+	1    2900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5C74E3EE
+P 3300 2650
+F 0 "#PWR0101" H 3300 2400 50  0001 C CNN
+F 1 "GND" V 3305 2522 50  0000 R CNN
+F 2 "" H 3300 2650 50  0001 C CNN
+F 3 "" H 3300 2650 50  0001 C CNN
+	1    3300 2650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3100 2650 3200 2650
+Wire Wire Line
+	3200 2750 3200 2650
+Connection ~ 3200 2650
+Wire Wire Line
+	3200 2650 3300 2650
+Wire Wire Line
+	3100 2750 3200 2750
+Wire Wire Line
+	3100 2850 3400 2850
+Text Label 3400 2850 0    50   ~ 0
+-BATT
+NoConn ~ 3100 2950
+$Comp
+L power:GND #PWR0102
+U 1 1 5C74E5B4
+P 3100 3150
+F 0 "#PWR0102" H 3100 2900 50  0001 C CNN
+F 1 "GND" H 3105 2977 50  0000 C CNN
+F 2 "" H 3100 3150 50  0001 C CNN
+F 3 "" H 3100 3150 50  0001 C CNN
+	1    3100 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Audio_Components:AudioJack2_Switch J2
+U 1 1 5C74E70B
+P 7250 2850
+F 0 "J2" H 7250 3200 50  0000 R CNN
+F 1 "Output" H 7300 2450 50  0000 R CNN
+F 2 "Audio_Components:Jack_6.3mm_Amphenol_ACJM-NHDR_Horizontal" H 7250 2850 50  0001 C CNN
+F 3 "" H 7250 2850 50  0001 C CNN
+	1    7250 2850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5C74EA2D
+P 6850 2650
+F 0 "#PWR0103" H 6850 2400 50  0001 C CNN
+F 1 "GND" V 6855 2522 50  0000 R CNN
+F 2 "" H 6850 2650 50  0001 C CNN
+F 3 "" H 6850 2650 50  0001 C CNN
+	1    6850 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2650 6950 2650
+Wire Wire Line
+	7050 2750 6950 2750
+Wire Wire Line
+	6950 2750 6950 2650
+Connection ~ 6950 2650
+Wire Wire Line
+	6950 2650 7050 2650
+NoConn ~ 7050 3150
+$Comp
+L Connector:Barrel_Jack_Switch J3
+U 1 1 5C74F00C
+P 2950 4250
+F 0 "J3" H 2950 4450 50  0000 C CNN
+F 1 "9VDC" H 2950 4050 50  0000 C CNN
+F 2 "Audio_Components:CUI_PJ-057A" H 3000 4210 50  0001 C CNN
+F 3 "~" H 3000 4210 50  0001 C CNN
+	1    2950 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5C74F1B6
+P 3500 4150
+F 0 "#PWR0104" H 3500 3900 50  0001 C CNN
+F 1 "GND" V 3505 4022 50  0000 R CNN
+F 2 "" H 3500 4150 50  0001 C CNN
+F 3 "" H 3500 4150 50  0001 C CNN
+	1    3500 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5C74F418
+P 2950 4850
+F 0 "J4" H 2950 4650 50  0000 C CNN
+F 1 "9V BATT" H 2900 5000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2950 4850 50  0001 C CNN
+F 3 "~" H 2950 4850 50  0001 C CNN
+	1    2950 4850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 4850 3350 4850
+Wire Wire Line
+	3350 4850 3350 4250
+Wire Wire Line
+	3350 4250 3250 4250
+Wire Wire Line
+	3250 4150 3500 4150
+Wire Wire Line
+	3150 4750 3450 4750
+Text Label 3450 4750 0    50   ~ 0
+-BATT
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5C7502EE
+P 2750 4800
+F 0 "H1" H 2700 5000 50  0000 L CNN
+F 1 "MountingHole" H 2200 4600 50  0000 L CNN
+F 2 "Audio_Components:MountingHole_3.2mm" H 2750 4800 50  0001 C CNN
+F 3 "~" H 2750 4800 50  0001 C CNN
+	1    2750 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R RLED1
+U 1 1 5C75189E
+P 4100 4600
+F 0 "RLED1" H 4170 4646 50  0000 L CNN
+F 1 "3.9k" H 4170 4555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4030 4600 50  0001 C CNN
+F 3 "~" H 4100 4600 50  0001 C CNN
+	1    4100 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED LED1
+U 1 1 5C751AE6
+P 4100 5000
+F 0 "LED1" V 4138 4882 50  0000 R CNN
+F 1 "RED" V 4047 4882 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 4100 5000 50  0001 C CNN
+F 3 "~" H 4100 5000 50  0001 C CNN
+	1    4100 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 4350 4100 4450
+Wire Wire Line
+	4100 4750 4100 4850
+$Comp
+L Audio_Components:SW_3PDT SW1
+U 1 1 5C75282A
+P 8400 4550
+F 0 "SW1" H 8400 4835 50  0001 C CNN
+F 1 "SW_3PDT" H 8400 4743 50  0000 C CNN
+F 2 "Audio_Components:SW_3PDT_Solder_Lug" H 8400 4550 50  0001 C CNN
+F 3 "" H 8400 4550 50  0001 C CNN
+	1    8400 4550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Audio_Components:SW_3PDT SW1
+U 2 1 5C75299C
+P 8400 4850
+F 0 "SW1" H 8400 5043 50  0001 C CNN
+F 1 "SW_3PDT" H 8400 5044 50  0001 C CNN
+F 2 "Audio_Components:SW_3PDT_Solder_Lug" H 8400 4850 50  0001 C CNN
+F 3 "" H 8400 4850 50  0001 C CNN
+	2    8400 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Audio_Components:SW_3PDT SW1
+U 3 1 5C752B51
+P 8400 5150
+F 0 "SW1" H 8400 5343 50  0001 C CNN
+F 1 "SW_3PDT" H 8400 5344 50  0001 C CNN
+F 2 "Audio_Components:SW_3PDT_Solder_Lug" H 8400 5150 50  0001 C CNN
+F 3 "" H 8400 5150 50  0001 C CNN
+	3    8400 5150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x09 Jsw1
+U 1 1 5C7538AD
+P 7650 4850
+F 0 "Jsw1" H 7600 5400 50  0000 C CNN
+F 1 "Conn_01x09" H 7570 5376 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x09_P1.27mm_Vertical" H 7650 4850 50  0001 C CNN
+F 3 "~" H 7650 4850 50  0001 C CNN
+	1    7650 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 4450 7850 4450
+Wire Wire Line
+	7850 4650 8200 4650
+Wire Wire Line
+	8200 4750 7850 4750
+Wire Wire Line
+	7850 4950 8200 4950
+Wire Wire Line
+	7850 5050 8200 5050
+Wire Wire Line
+	7850 5250 8200 5250
+Wire Wire Line
+	7850 5150 8400 5150
+Wire Wire Line
+	8400 5150 8400 5250
+Wire Wire Line
+	8400 5250 8600 5250
+Wire Wire Line
+	8600 5250 8600 5150
+Wire Wire Line
+	7850 4850 8400 4850
+Wire Wire Line
+	8400 4850 8400 4950
+Wire Wire Line
+	8400 4950 8600 4950
+Wire Wire Line
+	8600 4950 8600 4850
+Wire Wire Line
+	7850 4550 8400 4550
+Wire Wire Line
+	8400 4550 8400 4650
+Wire Wire Line
+	8400 4650 8600 4650
+Wire Wire Line
+	8600 4650 8600 4550
+$Sheet
+S 4700 2400 1800 3150
+U 5C7572D6
+F0 "Schematic" 50
+F1 "schematic.sch" 50
+F2 "signal_input" I L 4700 3050 50 
+F3 "signal_output" O R 6500 3050 50 
+F4 "Fsw1" U R 6500 4450 50 
+F5 "Fsw2" U R 6500 4550 50 
+F6 "Fsw3" U R 6500 4650 50 
+F7 "Fsw4" U R 6500 4750 50 
+F8 "Fsw5" U R 6500 4850 50 
+F9 "Fsw6" U R 6500 4950 50 
+F10 "Fsw7" U R 6500 5050 50 
+F11 "Fsw8" U R 6500 5150 50 
+F12 "Fsw9" U R 6500 5250 50 
+F13 "+VDC" B L 4700 4350 50 
+$EndSheet
+Wire Wire Line
+	6500 3050 7050 3050
+Wire Wire Line
+	3250 4350 4100 4350
+Wire Wire Line
+	4700 4350 4100 4350
+Connection ~ 4100 4350
+Wire Wire Line
+	3100 3050 4700 3050
+$Comp
+L Audio_Components:Chassis_GND CH1
+U 1 1 5C76185D
+P 3000 5800
+F 0 "CH1" H 3000 5600 50  0001 C CNN
+F 1 "Chassis_GND" H 3087 5773 50  0000 L CNN
+F 2 "Audio_Components:BatteryHolder_Keystone_629" H 3000 5750 50  0001 C CNN
+F 3 "" H 3000 5750 50  0001 C CNN
+	1    3000 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5C762505
+P 3000 5600
+F 0 "#PWR0105" H 3000 5350 50  0001 C CNN
+F 1 "GND" H 3005 5427 50  0000 C CNN
+F 2 "" H 3000 5600 50  0001 C CNN
+F 3 "" H 3000 5600 50  0001 C CNN
+	1    3000 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 5600 3000 5800
+$Comp
+L Connector_Generic:Conn_01x09 Jsw2
+U 1 1 5C763B67
+P 7450 4850
+F 0 "Jsw2" H 7350 5400 50  0000 L CNN
+F 1 "Conn_01x09" H 7370 5376 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x09_P1.27mm_Vertical" H 7450 4850 50  0001 C CNN
+F 3 "~" H 7450 4850 50  0001 C CNN
+	1    7450 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5C76465A
+P 7250 4850
+F 0 "#PWR0106" H 7250 4600 50  0001 C CNN
+F 1 "GND" V 7255 4722 50  0000 R CNN
+F 2 "" H 7250 4850 50  0001 C CNN
+F 3 "" H 7250 4850 50  0001 C CNN
+	1    7250 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 4750 6850 4750
+Wire Wire Line
+	6850 4750 6850 5800
+Wire Wire Line
+	6850 5800 4100 5800
+Wire Wire Line
+	4100 5800 4100 5150
+Wire Wire Line
+	7250 4450 6500 4450
+Wire Wire Line
+	7250 4550 6500 4550
+Wire Wire Line
+	7250 4650 6500 4650
+Wire Wire Line
+	6500 4950 7250 4950
+Wire Wire Line
+	7250 5050 6500 5050
+Wire Wire Line
+	6500 5150 7250 5150
+Wire Wire Line
+	7250 5250 6500 5250
+NoConn ~ 6500 4750
+NoConn ~ 6500 4850
+$EndSCHEMATC

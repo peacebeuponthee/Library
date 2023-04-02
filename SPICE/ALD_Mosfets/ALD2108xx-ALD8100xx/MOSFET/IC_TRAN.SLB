@@ -1,0 +1,231 @@
+*version 8.0 1278318196
+@index
+symloc 1101X:nfet4x 0 216
+symloc 1101A:nfet5x 216 253
+symloc 1101B:nfet5x 469 253
+symloc 1101:nfet5x 722 218
+symloc 1101G:nfet5x 940 221
+symloc 1102I:pfet4x 1161 220
+symloc 1102A:pfet4x 1381 219
+symloc 1102B:pfet4x 1600 141
+symloc 1102:pfet4x 1741 138
+symloc 1102G:pfet4x 1879 141
+symloc nfet5x 2020 905
+symloc nfet4x 2925 814
+symloc pfet4x 3739 776
+*symbol 1101X ako nfet4x
+d N Channel Transistor
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B @MODEL PARAMS: VTN=@VTN
+a 0 s 13 0 28 20 hln 100 PART=1101x
+a 0 s 0 0 0 10 hln 100 MODEL=1101x
+*symbol 1101A ako nfet5x
+d N-Channel Transistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 1 s 9 0 6 4 hln 100 REFDES=M?
+a 0 sp 11 0 26 20 hln 100 PART=1101A
+a 0 sp 0 0 0 0 hln 100 MODEL=1101A
+*symbol 1101B ako nfet5x
+d N-Channel Transistor
+@type p
+@attributes
+a 1 s 9 0 6 4 hln 100 REFDES=M?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 0 sp 11 0 24 20 hln 100 PART=1101B
+a 0 sp 0 0 0 0 hln 100 MODEL=1101B
+*symbol 1101 ako nfet5x
+d N-Channel Transistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 0 sp 11 0 26 20 hln 100 PART=1101
+a 0 sp 0 0 0 0 hln 100 MODEL=1101
+*symbol 1101G ako nfet5x
+d N-Channel Transistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 0 sp 11 0 26 20 hln 100 PART=1101G
+a 0 sp 0 0 0 0 hln 100 MODEL=1101G
+*symbol 1102I ako pfet4x
+d P-Channel Transistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %V+ @MODEL PARAMS: VTP=@VTP
+a 0 sp 13 0 28 26 hln 100 PART=1102I
+a 0 sp 0 0 0 20 hln 100 MODEL=1102I
+*symbol 1102A ako pfet4x
+d P-Channel Transistor
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B @MODEL PARAMS: VTP=@VTP
+a 0 sp 13 0 30 26 hln 100 PART=1102A
+a 0 sp 0 0 0 20 hln 100 MODEL=1101A
+*symbol 1102B ako pfet4x
+d P-Channel Transistor
+@type p
+@attributes
+a 0 sp 13 0 30 26 hln 100 PART=1102B
+a 0 sp 0 0 0 20 hln 100 MODEL=1102B
+*symbol 1102 ako pfet4x
+d P-Channel Transistor
+@type p
+@attributes
+a 0 sp 13 0 30 26 hln 100 PART=1102
+a 0 sp 0 0 0 20 hln 100 MODEL=1102
+*symbol 1102G ako pfet4x
+d P-Channel Transistor
+@type p
+@attributes
+a 0 sp 13 0 30 26 hln 100 PART=1102G
+a 0 sp 0 0 0 20 hln 100 MODEL=1102G
+*symbol nfet5x
+d 5 terminal n-channel FET
+@type p
+@attributes
+a 1 s 9 0 6 4 hln 100 REFDES=M?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B %V @MODEL PARAMS: VTN=@VTN
+a 0 u 0 0 0 10 hln 100 VTN=0.0
+a 0 sp 11 0 26 20 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+@pins
+p 0 10 22 hln 100 G n 0 20 h
+a 0 s 0 0 -1 18 hln 100 PIN=1
+a 0 s 0 0 -2 20 hln 100 ERC=x
+p 0 32 30 hln 100 S n 30 40 v
+a 0 s 0 0 28 41 hln 100 PIN=2
+a 0 s 0 0 30 42 hln 100 ERC=x
+p 0 28 8 hln 100 D n 30 0 d
+a 0 s 0 0 32 -3 hln 100 PIN=4
+a 0 s 0 0 30 -4 hln 100 ERC=x
+p 0 26 33 hln 100 B n 30 25 u
+a 0 s 0 0 33 27 hln 100 PIN=5
+a 0 s 0 0 34 25 hln 100 ERC=x
+p 2 7 38 hln 100 V n 15 40 v
+a 0 s 0 0 15 43 hln 100 PIN=3
+a 0 s 0 0 17 44 hln 100 ERC=x
+@graphics 35 40 0 20 10
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+v 0 15 10
+15 30
+;
+v 0 20 20
+20 17
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 10 20
+15 20
+;
+v 0 20 15
+20 10
+;
+v 0 20 7
+20 33
+;
+*symbol nfet4x
+d 4 terminal n-channel FET
+@type p
+@attributes
+a 1 s 9 0 2 6 hln 100 REFDES=M?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B @MODEL PARAMS: VTN=@VTN
+a 0 u 0 0 0 10 hln 100 VTN=0.0
+a 0 sp 13 0 28 20 hln 100 PART=
+a 0 sp 0 0 0 10 hln 100 MODEL=
+@pins
+p 0 10 22 hln 100 G n 0 20 h
+a 0 u 0 0 -1 18 hln 100 pin=1
+a 0 u 0 0 -2 20 hln 100 ERC=x
+p 0 32 30 hln 100 S n 30 40 v
+a 0 u 0 0 28 41 hln 100 pin=2
+a 0 u 0 0 30 42 hln 100 ERC=x
+p 0 28 8 hln 100 D n 30 0 d
+a 0 u 0 0 32 -3 hln 100 pin=4
+a 0 u 0 0 30 -4 hln 100 ERC=x
+p 0 26 33 hln 100 B n 30 25 u
+a 0 u 0 0 33 27 hln 100 pin=5
+a 0 u 0 0 34 25 hln 100 ERC=x
+@graphics 35 40 0 20 10
+v 0 20 20
+20 17
+;
+v 0 20 15
+20 10
+;
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pfet4x
+d 4 terminal p-channel FET
+@type p
+@attributes
+a 1 s 9 0 4 4 hln 100 REFDES=M?
+a 1 sp 0 0 0 0 hln 100 TEMPLATE=X^@REFDES %D %G %S %B @MODEL PARAMS: VTP=@VTP
+a 0 u 0 0 0 10 hln 100 VTP=0.0
+a 0 sp 13 0 30 26 hln 100 PART=
+a 0 sp 0 0 0 20 hln 100 MODEL=
+@pins
+p 0 -18 32 hln 100 G n 0 20 h
+a 0 u 0 0 1 18 hln 100 pin=1
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 0 36 -14 hln 100 S n 30 0 d
+a 0 u 0 0 32 1 hln 100 pin=2
+a 0 u 0 0 30 0 hln 100 ERC=x
+p 0 28 48 hln 100 D n 30 40 v
+a 0 u 0 0 28 39 hln 100 pin=4
+a 0 u 0 0 30 40 hln 100 ERC=x
+p 0 18 13 hln 100 B n 30 15 u
+a 0 u 1 0 29 17 hln 100 pin=3
+a 0 u 0 0 30 15 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 6
+20 10
+;
+v 0 20 10
+25 14
+;

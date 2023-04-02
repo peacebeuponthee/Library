@@ -1,0 +1,1527 @@
+* Library of Advanced Linear Devices, Inc. definitions
+*
+* Copyright 2014 Advanced Linear Devices, Inc.
+*  Neither this library nor any part may be copied for resale without the
+*  express written consent of Advanced Linear Devices, Inc.
+* PSPICE version
+* $Revision:  2.0  $
+* $Date:   18 Aug 2014 00:00:00  $
+* $By:    A.P  $
+* -----------------------------------------------------------------------------
+* This library of models and macromodels is being supplied to users as an aid to
+* circuit design. While it reflects reasonably close similarity to the actual 
+* device
+* in terms of performance, it is not suggested as a replacement for bread-
+* boarding. Simulation should be used as a forerunner or a supplement to
+* traditional lab testing.
+*
+* Users should very carefully note the following factors regarding these 
+* models:
+*
+*     Model performance in general will reflect typical baseline specs for a
+*     given device, and certain aspects of performance may not be modeled
+*     fully.
+*
+*     While reasonable care has been taken in their preparation, we cannot be
+*     responsible for correct application on any and all computer systems.
+*
+*     In all cases, the current data sheet information for a given real device
+*     is your final design guideline, and is the only actual performance
+*     guarantee.  For further technical information, refer to individual device
+*     data sheets.
+*
+*     Model users are hereby notified that these models are supplied "as is",
+*     with no direct or implied responsibility on the part of Advanced Linear
+*     Devices for their operation within a customer circuit or system. Further,
+*     ALD reserves the right to change these models without prior notice. 
+*
+*     The macromodels listed in this library represent typical performance 
+*     characteristics, without offset (Vos) adjustment, or other 
+*     parameters that would allow for Monte Carlo simulation of these circuits. 
+*     
+* -----------------------------------------------------------------------------
+*    
+* Your feedback and suggestions on these (and future) models will be
+* appreciated.
+*
+*
+* Advanced Linear Devices, Inc.
+* Customer Support Group
+* 415 Tasman Drive
+* Sunnyvale, California. 94089
+* Tel: (408) 747-1155 
+* Fax: (408) 747-1286
+* techsupport@aldinc.com
+* -----------------------------------------------------------------------------
+*
+* 21XXYY.lib
+* includes ALD1108yy, ALD1109yy, ALD1119yy,ALD1148yy, ALD1149yy
+* ALD2108yy, ALD2148yy, ALD2129yy, ALD2169yy 
+* ALD8100xx, ALD9100xx libraries
+* where VGS(th) = yy V (variable yy is from +3.30V to -3.5V)
+* where Vt = xx V  (variable xx is from 1.6V to 2.8V) 
+*----------------------------------
+* N channel TRANSISTORS
+*----------------------------------
+*
+*          listing of single integrated 11xxyy/21xxyy transistors.
+*          Five terminal N-channel transistors.
+*   110814 VGS(TH)=1.40V transistor
+*   110808 VGS(TH)=0.80V transistor
+*   110804 VGS(TH)=0.40V transistor
+*   110802 VGS(TH)=0.20V transistor
+*   110800 VGS(TH)=0.00V transistor
+*   114804 VGS(TH)=-0.40V transistor
+*   114813 VGS(TH)=-1.30V transistor
+*   114835 VGS(TH)=-3.50V transistor
+*   111933 VGS(TH)=3.30V transistor
+*   11xxyy VGS(TH)=variable VGS(TH) transistor
+*   210814 VGS(TH)=1.40V transistor
+*   210808 VGS(TH)=0.80V transistor
+*   210804 VGS(TH)=0.40V transistor
+*   210802 VGS(TH)=0.20V transistor
+*   210800 VGS(TH)=0.00V transistor
+*   214804 VGS(TH)=-0.40V transistor
+*   214813 VGS(TH)=-1.30V transistor
+*   214835 VGS(TH)=-3.50V transistor
+*   21x8yy VGS(TH)=variable VGS(TH) transistor
+*   212914 VGS(TH)=1.40V transistor
+*   212908 VGS(TH)=0.80V transistor
+*   212904 VGS(TH)=0.40V transistor
+*   212902 VGS(TH)=0.20V transistor
+*   212900 VGS(TH)=0.00V transistor
+*   216904 VGS(TH)=-0.40V transistor
+*   216913 VGS(TH)=-1.30V transistor
+*   216935 VGS(TH)=-3.50V transistor
+*   21x9yy VGS(TH)=variable VGS(TH) transistor
+*   810016 Vt = 1.60V
+*   810017 Vt = 1.70V
+*   810018 Vt = 1.80V
+*   810019 Vt = 1.90V 
+*   810020 Vt = 2.00V 
+*   810021 Vt = 2.10V 
+*   810022 Vt = 2.20V 
+*   810023 Vt = 2.30V
+*   810024 Vt = 2.40V
+*   810025 Vt = 2.50V
+*   810026 Vt = 2.60V
+*   810027 Vt = 2.70V
+*   810028 Vt = 2.80V
+*   910016 Vt = 1.60V 
+*   910017 Vt = 1.70V 
+*   910018 Vt = 1.80V 
+*   910019 Vt = 1.90V 
+*   910020 Vt = 2.00V 
+*   910021 Vt = 2.10V
+*   910022 Vt = 2.20V 
+*   910023 Vt = 2.30V
+*   910024 Vt = 2.40V
+*   910025 Vt = 2.50V
+*   910026 Vt = 2.60V
+*   910027 Vt = 2.70V
+*   910028 Vt = 2.80V
+*
+*              d g s b v+
+.subckt 110814 1 2 3 4 5 params: vtn=1.363V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 110808 1 2 3 4 5 params: vtn=0.763V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 110804 1 2 3 4 5 params: vtn=0.363V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 110802 1 2 3 4 5 params: vtn=0.163V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 110800 1 2 3 4 5 params: vtn=-0.037V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 114804 1 2 3 4 5 params: vtn=-0.437V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 114813 1 2 3 4 5 params: vtn=-1.337V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 114835 1 2 3 4 5 params: vtn=-3.537V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 111933 1 2 3 4 5 params: vtn=3.263V
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 11xxyy 1 2 3 4 5 params: vtn=vtn
+m1 1 2 3 4 ncg l=7.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=1
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.05u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 210814 1 2 3 4 5 params: vtn=1.363V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 210808 1 2 3 4 5 params: vtn=0.763V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 210804 1 2 3 4 5 params: vtn=0.363V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 210802 1 2 3 4 5 params: vtn=0.163V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*------------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 210800 1 2 3 4 5 params: vtn=-0.037V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 214804 1 2 3 4 5 params: vtn=-0.437V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 214813 1 2 3 4 5 params: vtn=-1.337V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 214835 1 2 3 4 5 params: vtn=-3.537V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 21x8yy 1 2 3 4 5 params: vtn=vtn
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 212914 1 2 3 4 5 params: vtn=1.363V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 212908 1 2 3 4 5 params: vtn=0.763V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 212904 1 2 3 4 5 params: vtn=0.363V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 212902 1 2 3 4 5 params: vtn=0.163V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 212900 1 2 3 4 5 params: vtn=-0.037V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 216904 1 2 3 4 5 params: vtn=-0.437V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 216913 1 2 3 4 5 params: vtn=-1.337V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 216935 1 2 3 4 5 params: vtn=-3.537V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 21x9yy 1 2 3 4 5 params: vtn=vtn
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810016 1 2 3 4 5 params: vtn=1.563V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810017 1 2 3 4 5 params: vtn=1.663V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810018 1 2 3 4 5 params: vtn=1.763V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810019 1 2 3 4 5 params: vtn=1.863V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810020 1 2 3 4 5 params: vtn=1.963V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810021 1 2 3 4 5 params: vtn=2.063V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810022 1 2 3 4 5 params: vtn=2.163V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*             
+*              d g s b v+
+.subckt 810023 1 2 3 4 5 params: vtn=2.263V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 810024 1 2 3 4 5 params: vtn=2.363V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 810025 1 2 3 4 5 params: vtn=2.463V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 810026 1 2 3 4 5 params: vtn=2.563V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 810027 1 2 3 4 5 params: vtn=2.663V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 810028 1 2 3 4 5 params: vtn=2.763V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=10
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910016 1 2 3 4 5 params: vtn=1.563V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910017 1 2 3 4 5 params: vtn=1.663V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910018 1 2 3 4 5 params: vtn=1.763V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910019 1 2 3 4 5 params: vtn=1.863V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910020 1 2 3 4 5 params: vtn=1.963V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910021 1 2 3 4 5 params: vtn=2.063V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910022 1 2 3 4 5 params: vtn=2.163V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910023 1 2 3 4 5 params: vtn=2.263V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910024 1 2 3 4 5 params: vtn=2.363V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910025 1 2 3 4 5 params: vtn=2.463V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910026 1 2 3 4 5 params: vtn=2.563V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910027 1 2 3 4 5 params: vtn=2.663V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*
+*              d g s b v+
+.subckt 910028 1 2 3 4 5 params: vtn=2.763V
+m1 1 2 3 4 ncg l=4.8e-6 w=138e-6 as=0.603e-8 ps=0.478e-3 ad=0.161e-8
++                       nrd=0.3 nrs=1 nrg=25 nrb=35
+.param vtx={vtn} cox=1.0 ires=0.41 pox=1.0 M=20
+.model ncg  nmos  (level=2
++			 gamma=0.035 lot/4/uniform=-.22 dev/uniform=.04
++			 vto={vtn}   lot/2/uniform=.2   dev/uniform=19e-3
++             	 Uo=650      lot/3/uniform=40   dev/uniform=5
++             	 Ucrit=0.7e4 Uexp=.1 Vmax=1.6e5
++             	 phi=0.65 tpg=+1
++             	 nsub={1e16*ires} neff={10*ires} nss=0.7e11 nfs=4.4e11
++             	 tox=(0.047u*cox) lot/8/uniform=9.1% dev/uniform=.05%
++             	 Cgso={.94n*cox} Cgdo={.59n*cox} Cgbo={.138n*pox} Xqc=.42
++             	 cj=.39m cjsw=264p xj=1.0u
++			 ld=0.8u lot/uniform=.19 dev/uniform=.02 
++			 wd=1.05u lot/uniform=.42 dev/uniform=.1
++            	 pb=.9 js=20e-6  mj=.5 mjsw=0.18
++             	 kf=.75e-28 rsh=10 lot/1/uniform=4 dev/uniform=.5)
+dbv 4 5 dps 0.8e-8
+dbd 4 1 dps 0.8e-8
+dbs 4 3 dps 0.8e-8
+dbg 4 2 dps 0.8e-8
+dgv 2 5 dps 0.8e-8
+.ends
+*-----------------------------------------------------------------------------------------*

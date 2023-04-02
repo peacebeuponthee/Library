@@ -1,0 +1,19 @@
+* Connections: LED Anode (+)
+*              | LED Cathode (-)
+*              | | R1 output
+*              | | | R common
+*              | | | | R2 output
+*              | | | | |
+.SUBCKT NSL-33 1 2 3 4 5
+R2 4 5 R=0.9*(V(res1)+V(res2))
+D1 1 2 LedWHITE
+B1 N001 0 V=0.655/log10(1.00000015+I(D1))
+C1 res1 0 170n
+R12 res1 N001 10k
+C2 res2 0 318µ
+R13 res2 N002 1Meg
+V1 N002 0 10
+R11 0 2 0.0001
+R1 3 4 R=1.1*(V(res1)+V(res2))
+.MODEL LedWHITE D(Is=0.27n Rs=5.65 N=6.79 Cjo=42p Iave=30m Vpk=5 type=LED)
+.ENDS

@@ -1,0 +1,834 @@
+*version 8.0 1425406976
+@index
+symloc ncg(3) 0 696
+symloc pcg(3) 696 698
+symloc ncg(4) 1394 658
+symloc pcg(4) 2052 662
+symloc ncc(3) 2714 696
+symloc pcc(3) 3410 697
+symloc ncc(4) 4107 659
+symloc pcc(4) 4766 662
+symloc nc4(3) 5428 696
+symloc pc4(3) 6124 697
+symloc nc4(4) 6821 659
+symloc pc4(4) 7480 697
+symloc ncb(3) 8177 696
+symloc pcb(3) 8873 697
+symloc ncb(4) 9570 659
+symloc pcb(4) 10229 697
+symloc nca(3) 10926 696
+symloc pca(3) 11622 697
+symloc nca(4) 12319 658
+symloc pca(4) 12977 662
+*symbol ncg(3)
+d 3 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 TEMPLATE=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 REFDES=M?
+a 0 u 0 0 0 20 hln 100 W=
+a 0 u 0 0 0 30 hln 100 L=
+a 0 u 13 0 36 28 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VSS
+a 0 s 0 0 0 10 hln 100 MODEL=ncg
+a 0 sp 13 0 30 18 hln 100 PART=ncg(3)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 s 0 0 29 17 hln 100 PIN=1
+a 0 s 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 20 7
+20 33
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+*symbol pcg(3)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L 
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VDD
+a 0 sp 11 0 30 22 hlb 100 PART=pcg(3)
+a 0 s 0 0 0 20 hlb 100 MODEL=pcg
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol ncg(4)
+d 4 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 s 0 0 0 20 hln 100 MODEL=ncg
+a 0 s 13 0 24 20 hln 100 PART=ncg(4)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 22 hln 100 b n 30 25 u
+a 0 u 0 0 29 26 hln 100 pin=4
+a 0 u 0 0 30 24 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pcg(4)
+d 4 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 13 0 0 10 hln 100 W=
+a 0 u 13 0 0 20 hln 100 L=
+a 0 u 13 0 38 30 hln 100 W/L=?
+a 0 s 0 0 0 10 hln 100 MODEL=pcg
+a 0 sp 13 0 30 18 hln 100 PART=pcg(4)
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 24 hln 100 b n 30 25 u
+a 0 u 0 0 29 28 hln 100 pin=4
+a 0 u 0 0 30 26 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol ncc(3)
+d 3 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 20 hln 100 W=
+a 0 u 0 0 0 30 hln 100 L=
+a 0 u 13 0 36 28 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VSS
+a 0 s 0 0 0 10 hln 100 MODEL=ncc
+a 0 sp 13 0 30 18 hln 100 PART=ncc(3)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pcc(3)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VDD
+a 0 sp 11 0 30 22 hlb 100 PART=pcc(3)
+a 0 s 0 0 0 20 hlb 100 MODEL=pcc
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol ncc(4)
+d 4 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL  \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 s 0 0 0 20 hln 100 MODEL=ncc
+a 0 s 13 0 24 20 hln 100 PART=ncc(4)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 22 hln 100 b n 30 25 u
+a 0 u 0 0 29 26 hln 100 pin=4
+a 0 u 0 0 30 24 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pcc(4)
+d 4 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 13 0 0 10 hln 100 W=
+a 0 u 13 0 0 20 hln 100 L=
+a 0 u 13 0 38 30 hln 100 W/L=?
+a 0 s 0 0 0 10 hln 100 MODEL=pcc
+a 0 sp 13 0 30 18 hln 100 PART=pcc(4)
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 24 hln 100 b n 30 25 u
+a 0 u 0 0 29 28 hln 100 pin=4
+a 0 u 0 0 30 26 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol nc4(3)
+d 3 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 20 hln 100 W=
+a 0 u 0 0 0 30 hln 100 L=
+a 0 u 13 0 36 28 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VSS
+a 0 s 0 0 0 10 hln 100 MODEL=nc4
+a 0 sp 13 0 30 18 hln 100 PART=nc4(3)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pc4(3)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VDD
+a 0 sp 11 0 30 22 hlb 100 PART=pc4(3)
+a 0 s 0 0 0 20 hlb 100 MODEL=pc4
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol nc4(4)
+d 4 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL  \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 s 0 0 0 20 hln 100 MODEL=nc4
+a 0 s 13 0 24 20 hln 100 PART=nc4(4)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 22 hln 100 b n 30 25 u
+a 0 u 0 0 29 26 hln 100 pin=4
+a 0 u 0 0 30 24 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pc4(4)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_PWR
+a 0 sp 11 0 30 22 hlb 100 PART=pc4(4)
+a 0 s 0 0 0 20 hlb 100 MODEL=pc4
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol ncb(3)
+d 3 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 20 hln 100 W=
+a 0 u 0 0 0 30 hln 100 L=
+a 0 u 13 0 36 28 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VSS
+a 0 s 0 0 0 10 hln 100 MODEL=ncb
+a 0 sp 13 0 30 18 hln 100 PART=ncb(3)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pcb(3)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VDD
+a 0 sp 11 0 30 22 hlb 100 PART=pcb(3)
+a 0 s 0 0 0 20 hlb 100 MODEL=pcb
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol ncb(4)
+d 4 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL  \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 s 0 0 0 20 hln 100 MODEL=ncb
+a 0 s 13 0 24 20 hln 100 PART=ncb(4)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 22 hln 100 b n 30 25 u
+a 0 u 0 0 29 26 hln 100 pin=4
+a 0 u 0 0 30 24 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pcb(4)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_PWR
+a 0 sp 11 0 30 22 hlb 100 PART=pcb(4)
+a 0 s 0 0 0 20 hlb 100 MODEL=pcb
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol nca(3)
+d 3 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 20 hln 100 W=
+a 0 u 0 0 0 30 hln 100 L=
+a 0 u 13 0 36 28 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VSS
+a 0 s 0 0 0 10 hln 100 MODEL=nca
+a 0 sp 13 0 30 18 hln 100 PART=nca(3)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pca(3)
+d 3 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 u 0 0 0 0 hln 100 ipin(b)=$G_VDD
+a 0 sp 11 0 30 22 hlb 100 PART=pca(3)
+a 0 s 0 0 0 20 hlb 100 MODEL=pca
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 13 hln 100 b n 30 15 u
+a 0 u 0 0 29 17 hln 100 pin=1
+a 0 u 0 0 30 15 hln 100 ERC=p
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;
+*symbol nca(4)
+d 4 terminal n-channel mosfet
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 0 0 0 10 hln 100 W=
+a 0 u 0 0 0 20 hln 100 L=
+a 0 u 13 0 34 30 hln 100 W/L=?
+a 0 s 0 0 0 20 hln 100 MODEL=nca
+a 0 s 13 0 24 20 hln 100 PART=nca(4)
+@pins
+p 0 25 40 hln 100 s n 30 40 v
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 22 hln 100 b n 30 25 u
+a 0 u 0 0 29 26 hln 100 pin=4
+a 0 u 0 0 30 24 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+30 30
+;
+v 0 30 30
+25 34
+;
+*symbol pca(4)
+d 4 terminal p-channel mosfet 
+@type p
+@attributes
+a 1 s 0 0 0 0 hln 100 template=M^@refdes %d %g %s %b @MODEL \n+ W=@W L=@L
+a 1 s 9 0 5 10 hln 100 refdes=M?
+a 0 u 13 0 0 10 hln 100 W=
+a 0 u 13 0 0 20 hln 100 L=
+a 0 u 13 0 38 30 hln 100 W/L=?
+a 0 s 0 0 0 10 hln 100 MODEL=pca
+a 0 sp 13 0 30 18 hln 100 PART=pca(4)
+@pins
+p 0 10 20 hln 100 g n 0 20 h
+p 0 25 40 hln 100 s n 30 40 v
+p 0 25 10 hln 100 d n 30 0 d
+p 0 18 24 hln 100 b n 30 25 u
+a 0 u 0 0 29 28 hln 100 pin=4
+a 0 u 0 0 30 26 hln 100 ERC=x
+@graphics 40 40 0 20 10
+v 0 10 20
+15 20
+;
+v 0 15 10
+15 30
+;
+v 0 20 7
+20 33
+;
+v 0 20 30
+30 30
+;
+v 0 20 10
+30 10
+;
+v 0 25 26
+20 30
+;
+v 0 20 30
+25 34
+;

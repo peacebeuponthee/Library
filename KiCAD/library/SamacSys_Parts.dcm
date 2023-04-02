@@ -1,0 +1,21 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP 100DP3T1B4M7QE
+D Toggle Switches DPDT ON-OFF-ON TOGGL
+K
+F https://www.mouser.com/datasheet/2/140/100-1079940.pdf
+$ENDCMP
+#
+$CMP SR10010F-0204-20F0B-C7-N-0027
+D Rotary Switches 2 POLE 4 POS D SHAFT
+K
+F https://componentsearchengine.com/Datasheets/1/SR10010F-0204-20F0B-C7-N-0027.pdf
+$ENDCMP
+#
+#End Doc Library
