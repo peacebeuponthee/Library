@@ -1,4 +1,3 @@
 # Library
 SPICE Models,
-KiCAD Libraries,
-etc
+KiCAD Libraries
